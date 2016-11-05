@@ -7,16 +7,53 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
 	</head>
-	<body>
+	<body class="join">
 		<div class="grid">
-			<div class="row">
-				<div class="col-6">
-					Leva polovica
-				</div>
-				<div class="col-6">
-					Desna polovica
+
+			<!-- Header -->
+			<div class="row header">
+				<div class="col-12">
+					<h1 class="text-center">Welcome to Microblog!</h1>
 				</div>
 			</div>
+
+			<!-- Join -->
+			<div class="row content">
+				
+				<!-- Login -->
+				<div class="col-6 left-side post">
+					<h2>Login</h2>
+					<form>
+						<input type="text" name="username" placeholder="Username">
+						<input type="password" name="password" placeholder="Password">
+						<input type="submit" value="Login">
+					</form>
+				</div>
+
+				<!-- Sign up -->
+				<div class="col-6 right-side post">
+					<h2>Sign Up</h2>
+					<form>
+						<input type="text" name="username" placeholder="Username">
+						<input type="password" name="password" placeholder="Password">
+						<input type="password" name="repeat-password" placeholder="Repeat password">
+						<input type="email" name="email" placeholder="Email">
+						<input type="text" name="short-bio" placeholder="Short bio (max. 100 characters)" maxlength="100">
+						<p class="add-profile-image">Add profile image: <input type="file" name="profile-image"></p>
+						<input type="submit" value="Sign Up">
+					</form>
+				</div>
+
+			</div>
+
+			<!-- Footer -->
+			<div class="row footer">
+				<div class="col-12">
+					<p>Vid Ribič • Spletno programiranje • Fakulteta za računalništvo in informatiko • 2016</p>
+				</div>
+			</div>
+
 		</div>
+
 	</body>
 </html>
