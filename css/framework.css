@@ -3,11 +3,86 @@
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f6f6f6;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #5575d5;
+}
+
+/* Placeholder color */
+*::-webkit-input-placeholder {
+    color: #a9a9a9;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #a9a9a9;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #a9a9a9;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #a9a9a9;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    border: none;
+    background-color: #f6f6f6;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+    outline-style: none;
+}
+
+input[type=submit] {
+    margin-bottom: 0;
+    background-color: #222;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-profile-image {
+    color: #a9a9a9;
+}
+
+input[type=file] {
+    padding: 0 0 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto
 }
 
 .grid {
     margin: 0 auto;
-    max-width: 1024px;
     width: 100%;
 }
 
@@ -63,4 +138,22 @@
 
 .col-12 {
     width: 100%;
+}
+
+.left-side,
+.right-side {
+    width: 49%;
+}
+
+.right-side {
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Prelom za mobilne naprave */
+    [class*="col-"],
+    .left-side,
+    .right-side {
+        width: 100%;
+    }
 }
