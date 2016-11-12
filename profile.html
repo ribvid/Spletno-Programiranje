@@ -5,13 +5,16 @@
 		<title>John Appleseed | Microblog</title>
 		<link rel="stylesheet" href="css/framework.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/lightbox.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
 	</head>
 	<body>
 		<div class="grid">
 
+			<!-- <div class="row"><div class="col-6" style="background-color: yellow;">leva</div><div class="col-6" style="background-color: blue;">desna</div></div> -->
+
 			<!-- Header -->
-			<div class="row header">
+			<div class="header">
 			
 				<div class="row">
 					<div class="profile-image">
@@ -19,9 +22,12 @@
 					</div>
 				</div>
 
-				<div class="row user-info">
-					<div class="text-center">
+				<div class="user-info">
+					<div class="row">
 						<h1>John Appleseed <a href="#" class="follow">FOLLOW</a></h1>
+					</div>
+
+					<div class="row">
 						<h2>iOS and Android Developer. Dog Owner. Music Lover.</h2>
 					</div>
 				</div>
@@ -40,14 +46,14 @@
 			</div>
 
 			<!-- Vsebina -->
-			<div class="row content">
+			<div class="content">
 
 				<!-- 1. objava - full width -->
 				<div class="row">
 					<div class="col-12 post">
 						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim leo quis nisi elementum imperdiet. Ut porta tortor ut mattis porta. Vivamus euismod eu lorem sed ornare. Nulla suscipit neque nec porttitor condimentum. <a href="#">#soccer</a></p>
 						<ul class="meta">
-							<li>30th October, 2016</li>
+							<li>30th October, 2016 at 4 PM</li>
 							<li><a href="#"><span class="repost"></span></a></li>
 							<li><a href="#"><span class="favorite"></span></a></li>
 						</ul>
@@ -56,25 +62,32 @@
 
 				<!-- 2. objava - half width -->
 				<div class="row">
-					<div class="col-6 left-side image-post dark">
+					<div class="col-6 image-post post-6 dark">
 						<div class="row">	
 							<div class="image-description">	
 								<p class="text">Aliquam sagittis lacus ut nunc facilisis congue. <a href="#">#food</a></p>
 								<ul class="meta">
-									<li>31st December, 2016</li>
+									<li>31st December, 2016 at 4 PM</li>
 									<li><a href="#"><span class="repost"></span></a></li>
 									<li><a href="#"><span class="favorite"></span></a></li>
 								</ul>
 							</div>
 							<div class="image">
-								<img src="img/salad.jpg" alt="Salad" class="img-responsive">
+								<img id="image-1" src="img/salad.jpg" alt="Aliquam sagittis lacus ut nunc facilisis congue. #food" class="img-responsive" onclick="showImage('full-size-image-1', 'image-1', 'big-image-1', 'caption-image-1', 'close-image-1')">
+
+								<!-- Slika v polni velikosti -->
+								<div id="full-size-image-1" class="modal-image">
+									<span class="close-modal" id="close-image-1" onclick="document.getElementById('full-size-image').style.display='none'">&times;</span>
+									<img class="modal-image-content" id="big-image-1">
+									<div class="modal-image-caption" id="caption-image-1"></div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-6 right-side post">
+					<div class="col-6 post post-6 right-side">
 						<p class="text"><a href="#">@David Chapman</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim leo quis nisi elementum imperdiet. Ut porta tortor ut mattis porta. Vivamus euismod eu lorem sed ornare. Nulla suscipit neque nec porttitor condimentum.</p>
 						<ul class="meta">
-							<li>30th October, 2016</li>
+							<li>30th October, 2016 at 7 AM</li>
 							<li><a href="#"><span class="repost"></span></a></li>
 							<li><a href="#"><span class="favorite"></span></a></li>
 						</ul>
@@ -86,12 +99,14 @@
 					<div class="col-12 post">
 						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim leo quis nisi elementum imperdiet. Ut porta tortor ut mattis porta. Vivamus euismod eu lorem sed ornare. Nulla suscipit neque nec porttitor condimentum. <a href="#">#soccer</a></p>
 						<ul class="meta">
-							<li>30th October, 2016</li>
+							<li>30th October, 2016 at 8 PM</li>
 							<li><a href="#"><span class="repost"></span></a></li>
 							<li><a href="#"><span class="favorite"></span></a></li>
 						</ul>
 					</div>
 				</div>
+
+				<div id="result"></div>
 
 				<!-- Footer -->
 				<div class="row footer">
@@ -102,5 +117,8 @@
 
 			</div>
 		</div>
+
+		<script src="js/lightbox.js"></script>
+		<script src="js/loadMoreContent.js"></script>
 	</body>
 </html>
