@@ -48,12 +48,6 @@ input[type=email] {
     background-color: #f6f6f6;
 }
 
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus {
-    outline-style: none;
-}
-
 input[type=submit] {
     margin-bottom: 0;
     background-color: #222;
@@ -63,12 +57,27 @@ input[type=submit] {
     cursor: pointer;
 }
 
-.add-profile-image {
-    color: #a9a9a9;
-}
-
 input[type=file] {
     padding: 0 0 0 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #f6f6f6;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+textarea:focus {
+    outline-style: none;
+}
+
+.add-profile-image {
+    color: #a9a9a9;
 }
 
 .text-center {
@@ -89,7 +98,7 @@ input[type=file] {
 .row {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    display: -webkit-flex;
 }
 
 .col-1 {
@@ -140,20 +149,35 @@ input[type=file] {
     width: 100%;
 }
 
-.left-side,
-.right-side {
+
+.notification-3 {
+    width: 24%;
+}
+
+.notification-4 {
+    width: 32.33%;
+}
+
+.post-6,
+.notification-6 {
     width: 49%;
+}
+
+.notification-12 {
+    width: 100%;
 }
 
 .right-side {
     margin-left: auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
     /* Prelom za mobilne naprave */
-    [class*="col-"],
-    .left-side,
-    .right-side {
+    [class*="col-"] {
         width: 100%;
+    }
+    .row {
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
     }
 }
