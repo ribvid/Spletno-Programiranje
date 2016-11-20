@@ -32,6 +32,7 @@
 	      transform: translate(-50%,-50%);
 }
 
+.edit-user-info h1,
 .user-info h1 {
 	margin: 10px auto;
 	font-size: 26px;	
@@ -60,6 +61,7 @@
 	border-color: #5575d5;
 }
 
+.edit-user-info h2,
 .user-info h2 {
 	margin: 0 auto;
 	font-size: 14px;
@@ -125,12 +127,37 @@
 }
 
 .post,
-.image-post {
+.image-post,
+.search {
 	position: relative;
 	margin-bottom: 20px;
 	background-color: #fff;
 	font-size: 14px;
 	line-height: 1.5;
+}
+
+.search input {
+	margin-bottom: 0;
+	background-color: #fff;
+}
+
+.search-results {
+	display: none;
+	list-style-type: none;
+	border-top: 2px solid #f6f6f6;
+}
+
+.search-results li {
+	padding: 10px;
+	border-top: 1px solid #f6f6f6;
+}
+
+.search-results a {
+	color: #000;
+}
+
+.search-results li:hover {
+	background-color: #f6f6f6;
 }
 
 .image-description {
@@ -230,11 +257,11 @@
 	   -moz-background-size: cover;
 	     -o-background-size: cover;
 			background-size: cover;
-	color: #fff;
 }
 
 .join h1 {
 	font-size: 48px;
+	color: #fff;
 }
 
 .join h2 {
@@ -318,11 +345,70 @@ li.logged-in-right {
 	margin-top: 15px;
 }
 
+.edit-profile-image {
+	position: relative;
+	height: 120px;
+}
+
+.change-profile-image {
+	visibility: none;
+	position: absolute;
+	bottom: 0;
+	padding: 10px;
+	width: 100%;
+	z-index: 10;
+	opacity: 0;
+	background-color: rgb(246, 246, 246);
+	background-color: rgba(246, 246, 246, 0.9);
+	-webkit-transition: visibility 0s, opacity 0.4s linear;
+	   -moz-transition: visibility 0s, opacity 0.4s linear;
+		 -o-transition: visibility 0s, opacity 0.4s linear;
+			transition: visibility 0s, opacity 0.4s linear;
+}
+
+.change-profile-image a {
+	color: #000;
+}
+
+.edit-profile-image:hover > .change-profile-image {
+	visibility: visible;
+	opacity: 1;
+}
+
+.edit-user-info {
+	padding: 0 10px;
+}
+
+.edit-profile {
+	margin: 10px 0;
+}
+
+.delete-account a {
+	color: red;
+}
+
+.chart-title {
+	margin-bottom: 20px;
+}
+
+.chart .labels.y-labels {
+	text-anchor: end;
+}
+
+.chart .grid {
+	stroke: #000;
+	transition: stroke-dasharray .3s ease;
+	stroke-dasharray: 2;
+	stroke-width: 2;
+}
+
 @media only screen and (max-width: 980px) {
+	.edit-user-info h1,
 	.user-info h1 {
 		font-size: 48px;
 	}
 
+	.edit-user-info h2,
 	.user-info h2 {
 		font-size: 32px;
 	}

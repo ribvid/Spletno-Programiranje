@@ -149,11 +149,12 @@ textarea:focus {
     width: 100%;
 }
 
-
+.post-3,
 .notification-3 {
     width: 24%;
 }
 
+.post-4,
 .notification-4 {
     width: 32.33%;
 }
@@ -163,6 +164,12 @@ textarea:focus {
     width: 49%;
 }
 
+.post-8,
+.notification-8 {
+    width: 65.66%;
+}
+
+.post-12,
 .notification-12 {
     width: 100%;
 }
