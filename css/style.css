@@ -117,11 +117,6 @@
 	max-width: 1024px;
 }
 
-.logged-in-content { 
-	margin: 60px auto 0;
-	max-width: 1024px;
-}
-
 .post {	
 	padding: 20px;
 }
@@ -208,6 +203,14 @@
 	margin-right: 3px;
 }
 
+.meta li a {
+	color: #000;
+}
+
+.dark .meta li a {
+	color: #fff;
+}
+
 .favorite,
 .repost {
 	display: inline-block;
@@ -251,6 +254,50 @@
 	background-position: -16px -48px;
 }
 
+.tooltip {
+	position: relative;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	position: absolute;
+	width: 40px;
+	bottom: 150%;
+	left: 50%; 
+	margin-left: -20px;
+	padding: 5px 0;
+	border-radius: 6px;
+	z-index: 1;
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+}
+
+.dark .tooltip .tooltiptext {
+	background-color: #fff;
+	color: #222;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+/* Bottom arrow */
+.tooltip .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #000 transparent transparent transparent;
+}
+
+.dark .tooltip .tooltiptext::after {
+	border-color: #fff transparent transparent transparent;
+}
+
 .join {
 	background: url("../img/bg.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -274,6 +321,10 @@
 	font-size: 8px;
 	text-align: center;
 	color: #a9a9a9;
+}
+
+.logged-in { 
+	margin: 60px auto 0;
 }
 
 .logged-in-toolbar {
