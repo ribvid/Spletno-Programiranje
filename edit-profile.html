@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Timeline | Microblog</title>
+		<link rel="stylesheet" href="css/framework.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/lightbox.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+	</head>
+	<body>
+		<div class="grid">
+
+			<!-- Profile Info -->
+			<div class="row logged-in-toolbar">
+				<div class="small-profile-image">
+					<img src="img/profile-image.jpeg" alt="John Appleseed">
+				</div>
+				<ul>
+					<li>John Appleseed</li>
+					<li><a href="#">View my profile</a></li>
+					<li><a href="#">View my timeline</a></li>
+					<li><a href="#">View favorited posts</a></li>
+					<li><a href="#">View shared posts</a></li>
+					<li class="logged-in-right"><a href="#">Log out</a></li>
+				</ul>
+			</div>
+
+			<!-- Vsebina -->
+			<div class="logged-in-content">
+
+				<!-- Urejanje profilnih podatkov -->
+				<div class="row">
+					<div class="col-12 post post-8">
+						<div class="row">
+							<div class="col-4">
+								<div class="edit-profile-image">
+									<div class="profile-image">	
+										<img src="img/profile-image.jpeg" alt="John Appleseed">
+									</div>
+									<div class="change-profile-image text-center">
+										<input type="file" id="upload-new-profile-image" name="upload-new-profile-image" style="visibility: hidden; width: 1px; height: 1px">
+										<a href="" onclick="document.getElementById('upload-new-profile-image').click(); return false">Change profile image ...</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-8 edit-user-info">
+								<h1>John Appleseed</h1>
+								<h2>iOS and Android Developer. Dog Owner. Music Lover.</h2>
+								<p class="edit-profile"><a href="#">Edit</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 post post-4 right-side">
+						<p class="edit-profile">Email Address: john.appleseed@gmail.com</p>
+						<p class="edit-profile">Password: ***</p>
+						<p class="edit-profile delete-account"><a href="#">Delete my account</a></p>
+						<p class="edit-profile"><a href="#">Edit</a></p>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<!-- Graf: število novih sledilcev -->
+					<div class="col-12 post post-4">
+						<p class="chart-title">Number of new followers in last 5 days</p>
+						<svg viewBox="0 0 620 400" class="chart">
+							<g class="grid x-grid">
+								<line x1="40" x2="600" y1="400" y2="400"></line>
+							</g>
+							<g class="grid y-grid">
+								<line x1="40" x2="40" y1="0" y2="400"></line>
+							</g>
+							<g class="labels y-labels">
+								<text x="30" y="80">8</text>
+								<text x="30" y="160">6</text>
+								<text x="30" y="240">4</text>
+								<text x="30" y="320">2</text>
+								<text x="30" y="400">0</text>
+							</g>
+							<polyline fill="none" stroke="#888852" stroke-width="3" points="40,400 140,280 240,240 340,400 440,280 540,80 640,160"/>
+						</svg>
+					</div>
+
+					<!-- Graf: število novih všečkov -->
+					<div class="col-12 post post-4 right-side">
+						<p class="chart-title">Number of likes of my posts in last 5 days</p>
+						<svg viewBox="0 0 620 400" class="chart">
+							<g class="grid x-grid">
+								<line x1="40" x2="600" y1="400" y2="400"></line>
+							</g>
+							<g class="grid y-grid">
+								<line x1="40" x2="40" y1="0" y2="400"></line>
+							</g>
+							<g class="labels y-labels">
+								<text x="30" y="80">20</text>
+								<text x="30" y="160">15</text>
+								<text x="30" y="240">10</text>
+								<text x="30" y="320">5</text>
+								<text x="30" y="400">0</text>
+							</g>
+							<polyline fill="none" stroke="#d5d555" stroke-width="3" points="40,320 140,160 240,192 340,48 440,336 540,304 640,336"/>
+						</svg>
+					</div>
+
+					<!-- Graf: število novih delitev -->
+					<div class="col-12 post post-4 right-side">
+						<p class="chart-title">Number of shares of my posts in last 5 days</p>
+						<svg viewBox="0 0 620 400" class="chart">
+							<g class="grid x-grid">
+								<line x1="40" x2="600" y1="400" y2="400"></line>
+							</g>
+							<g class="grid y-grid">
+								<line x1="40" x2="40" y1="0" y2="400"></line>
+							</g>
+							<g class="labels y-labels">
+								<text x="30" y="80">4</text>
+								<text x="30" y="160">3</text>
+								<text x="30" y="240">2</text>
+								<text x="30" y="320">1</text>
+								<text x="30" y="400">0</text>
+							</g>
+							<polyline fill="none" stroke="#5575d5" stroke-width="3" points="40,240 140,400 240,160 340,80 440,400 540,400 640,320"/>
+						</svg>
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<div class="row footer">
+					<div class="col-12">
+						<p>Vid Ribič • Spletno programiranje • Fakulteta za računalništvo in informatiko • 2016</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+</html>
