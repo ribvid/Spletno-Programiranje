@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Microblog</title>
+		<link rel="stylesheet" href="css/framework.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+	</head>
+	<body class="join">
+		<div class="grid">
+
+			<!-- Header -->
+			<div class="row header">
+				<div class="col-12">
+					<h1 class="text-center">Welcome to Microblog!</h1>
+				</div>
+			</div>
+
+			<div class="content">
+
+				<!-- Search -->
+				<div class="row">
+					<div class="col-12 search">
+						<form action="search-results.html" method="GET">
+							<noscript>
+								<input type="submit" value="Search" class="searchBtn">
+							</noscript>
+							<div class="noscriptSearch">
+								<input type="text" name="search" placeholder="Search for people or tags ..." id="searchInput">
+							</div>
+						</form>
+						<ul class="search-results" id="results"></ul>
+						<ul class="search-results">
+							<li><a href="profile.html">John Appleseed</a></li>
+							<li><a href="#">Liam Forster</a></li>
+							<li><a href="#">David Chapman</a></li>
+							<li><a href="#">Tom Hanks</a></li>
+							<li><a href="tag.html">#soccer</a></li>
+							<li><a href="#">#food</a></li>
+							<li><a href="#">#time</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<script type="text/javascript" src="js/ajaxSearch.js"></script>
+
+				<div class="row">
+				
+					<!-- Login -->
+					<div class="col-6 post post-6">
+						<h2>Login</h2>
+						<form>
+							<input type="text" name="username" placeholder="Username">
+							<input type="password" name="password" placeholder="Password">
+							<input type="submit" value="Login">
+						</form>
+					</div>
+
+					<!-- Sign up -->
+					<div class="col-6 post post-6 right-side">
+						<h2>Sign Up</h2>
+						<form>
+							<input type="text" name="username" placeholder="Username">
+							<input type="password" name="password" placeholder="Password">
+							<input type="password" name="repeat-password" placeholder="Repeat password">
+							<input type="email" name="email" placeholder="Email">
+							<input type="text" name="short-bio" placeholder="Short bio (max. 100 characters)" maxlength="100">
+							<p class="add-profile-image">Add profile image: <input type="file" name="profile-image"></p>
+							<input type="submit" value="Sign Up">
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<div class="row footer">
+				<div class="col-12">
+					<p>Vid Ribič • Spletno programiranje • Fakulteta za računalništvo in informatiko • 2016</p>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>
