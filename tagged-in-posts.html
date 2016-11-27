@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Posts you're tagged in | Microblog</title>
+		<link rel="stylesheet" href="css/framework.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/lightbox.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+	</head>
+	<body>
+		<div class="grid">
+
+			<!-- Profile Info -->
+			<div class="row logged-in-toolbar">
+				<div class="small-profile-image">
+					<img src="img/profile-image.jpeg" alt="John Appleseed">
+				</div>
+				<!-- Za hamburger menu na manjših zaslonih -->
+				<label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+				<input type="checkbox" id="menu-toggle">
+				<!-- End -->
+				<ul id="logged-in-nav">
+					<li>John Appleseed</li>
+					<li><a href="timeline.html">Timeline</a></li>
+					<li><a href="logged-in-profile.html">View my profile</a></li>
+					<li><a href="favorited-posts.html">View favorited posts</a></li>
+					<li><a href="shared-posts.html">View shared posts</a></li>
+					<li><a href="edit-profile.html">Edit my profile info</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+			</div>
+
+			<!-- Header -->
+			<div class="header logged-in">
+
+				<div class="user-info">
+					<div class="row">
+						<h1>Posts you're tagged in</h1>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Vsebina -->
+			<div class="content">
+
+				<!-- 1. objava - full width -->
+				<div class="row">
+					<div class="col-12 post">
+						<p class="text"><a href="profile.html">@JohnAppleseed</a>: Pellentesque id eros in erat sodales placerat at sit amet est. Integer pulvinar malesuada leo, vel volutpat augue luctus eu. Cras suscipit diam vel dictum suscipit.</p>
+						<ul class="meta">
+							<li>Liam Forster</li>
+							<li>Chicago</li>
+							<li>8 November, 2016 at 6 PM</li>
+							<li><a href="#"><span class="repost tooltip"><span class="tooltiptext">1</span></span></a></li>
+							<li><a href="#"><span class="favorite tooltip"><span class="tooltiptext">3</span></span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<div class="row footer">
+					<div class="col-12">
+						<p>Vid Ribič • Spletno programiranje • Fakulteta za računalništvo in informatiko • 2016</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="js/lightbox.js"></script>
+	</body>
+</html>
