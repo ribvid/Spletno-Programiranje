@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Timeline | Microblog</title>
+		<title>Edit profile | Microblog</title>
 		<link rel="stylesheet" href="css/framework.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/lightbox.css">
@@ -16,13 +16,18 @@
 				<div class="small-profile-image">
 					<img src="img/profile-image.jpeg" alt="John Appleseed">
 				</div>
-				<ul>
+				<!-- Za hamburger menu na manjših zaslonih -->
+				<label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+				<input type="checkbox" id="menu-toggle">
+				<!-- End -->
+				<ul id="logged-in-nav">
 					<li>John Appleseed</li>
+					<li><a href="timeline.html">Timeline</a></li>
 					<li><a href="logged-in-profile.html">View my profile</a></li>
-					<li><a href="timeline.html">View my timeline</a></li>
-					<li><a href="#">View favorited posts</a></li>
-					<li><a href="#">View shared posts</a></li>
-					<li class="logged-in-right"><a href="#">Log out</a></li>
+					<li><a href="favorited-posts.html">View favorited posts</a></li>
+					<li><a href="shared-posts.html">View shared posts</a></li>
+					<li><a href="edit-profile.html">Edit my profile info</a></li>
+					<li><a href="#">Log out</a></li>
 				</ul>
 			</div>
 

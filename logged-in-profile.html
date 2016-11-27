@@ -16,13 +16,18 @@
 				<div class="small-profile-image">
 					<img src="img/profile-image.jpeg" alt="John Appleseed">
 				</div>
-				<ul>
+				<!-- Za hamburger menu na manjših zaslonih -->
+				<label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+				<input type="checkbox" id="menu-toggle">
+				<!-- End -->
+				<ul id="logged-in-nav">
 					<li>John Appleseed</li>
-					<li><a href="timeline.html">View my timeline</a></li>
-					<li><a href="#">View favorited posts</a></li>
-					<li><a href="#">View shared posts</a></li>
-					<li class="logged-in-right"><a href="#">Log out</a></li>
-					<li class="logged-in-right"><a href="edit-profile.html">Edit my profile info</a></li>
+					<li><a href="timeline.html">Timeline</a></li>
+					<li><a href="logged-in-profile.html">View my profile</a></li>
+					<li><a href="favorited-posts.html">View favorited posts</a></li>
+					<li><a href="shared-posts.html">View shared posts</a></li>
+					<li><a href="edit-profile.html">Edit my profile info</a></li>
+					<li><a href="#">Log out</a></li>
 				</ul>
 			</div>
 
@@ -93,7 +98,7 @@
 								<!-- Slika v polni velikosti -->
 								<div id="full-size-image-1" class="modal-image">
 									<span class="close-modal" id="close-image-1" onclick="document.getElementById('full-size-image').style.display='none'">&times;</span>
-									<img class="modal-image-content" id="big-image-1">
+									<img src="#" class="modal-image-content" id="big-image-1" alt="">
 									<div class="modal-image-caption" id="caption-image-1"></div>
 								</div>
 							</div>
