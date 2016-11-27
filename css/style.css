@@ -131,13 +131,27 @@
 	line-height: 1.5;
 }
 
-.search input {
+#postLocation,
+#imageLocation {
+	margin-top: 15px;
+	font-size: 12px;
+}
+
+#searchInput {
 	margin-bottom: 0;
 	background-color: #fff;
 }
 
+.searchBtn {
+	float: right;
+}
+
+.noscriptSearch {
+	overflow: hidden;
+	padding-right: 10px;
+}
+
 .search-results {
-	display: none;
 	list-style-type: none;
 	border-top: 2px solid #f6f6f6;
 }
@@ -212,7 +226,9 @@
 }
 
 .favorite,
-.repost {
+.repost,
+.isfavorited,
+.isreposted {
 	display: inline-block;
 	background: url('../img/icons.gif');
 	background-repeat: no-repeat;
@@ -222,35 +238,43 @@
 	vertical-align: middle;
 }
 
-.favorite {
+.favorite,
+.isfavorited:hover {
 	background-position: 0 0;
 }
 
-.repost {
+.repost,
+.isreposted:hover {
 	background-position: -16px 0;
 }
 
-.favorite:hover {
+.favorite:hover,
+.isfavorited {
 	background-position: 0 -16px;
 }
 
-.repost:hover {
+.repost:hover,
+.isreposted {
 	background-position: -16px -16px;
 }
 
-.dark .favorite {
+.dark .favorite,
+.dark .isfavorited:hover {
 	background-position: 0 -32px;
 }
 
-.dark .repost {
+.dark .repost,
+.dark .isreposted:hover {
 	background-position: -16px -32px;
 }
 
-.dark .favorite:hover {
+.dark .favorite:hover,
+.dark .isfavorited {
 	background-position: 0 -48px;
 }
 
-.dark .repost:hover {
+.dark .repost:hover,
+.dark .isreposted {
 	background-position: -16px -48px;
 }
 
@@ -336,29 +360,59 @@
 	color: #fff;
 }
 
-.logged-in-toolbar ul {
-	width: 100%;
+#logged-in-nav {
 	padding: 13px 0 0 15px;
 	font-size: 14px;
 	list-style-type: none;
 	overflow: hidden;
 }
 
-.logged-in-toolbar li {
+#logged-in-nav li {
 	float: left;
 	padding-right: 15px;
 }
 
-li.logged-in-right {
-	float: right;
-}
-
-.logged-in-toolbar li a {
+#logged-in-nav li a {
 	color: #fff;
 }
 
-.logged-in-toolbar li a:hover {
+#logged-in-nav li a:hover {
 	color: #d5d555;
+}
+
+#logged-in-nav li.icon {
+	display: none;
+}
+
+#menu-toggle,
+.menu-toggle-label {
+	display: none;
+}
+
+@media screen and (max-width: 980px) {
+	.menu-toggle-label {
+		display: inline-block;
+		padding: 10px 0 0 15px;
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	#logged-in-nav {
+		display: none;
+	}
+
+	input#menu-toggle:checked + #logged-in-nav {
+		display: inline-block;
+	}
+
+	#logged-in-nav li:not(:first-child) {
+		padding: 13px 0;
+		float: none;
+	}
+
+	#logged-in-nav li:first-child {
+		padding: 0 0 26px 0;
+	}
 }
 
 .notification-3,
@@ -402,7 +456,7 @@ li.logged-in-right {
 }
 
 .change-profile-image {
-	visibility: none;
+	visibility: hidden;
 	position: absolute;
 	bottom: 0;
 	padding: 10px;
@@ -449,8 +503,8 @@ li.logged-in-right {
 .chart .grid {
 	stroke: #000;
 	transition: stroke-dasharray .3s ease;
-	stroke-dasharray: 2;
-	stroke-width: 2;
+	stroke-dasharray: 2px;
+	stroke-width: 2px;
 }
 
 @media only screen and (max-width: 980px) {

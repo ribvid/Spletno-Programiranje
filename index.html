@@ -22,18 +22,19 @@
 				<!-- Search -->
 				<div class="row">
 					<div class="col-12 search">
-						<input type="text" name="search" placeholder="Search for people or tags ...">
-						<ul class="search-results">
-							<a href="profile.html"><li>John Appleseed</li></a>
-							<a href="#"><li>Liam Forster</li></a>
-							<a href="#"><li>David Chapman</li></a>
-							<a href="#"><li>Tom Hanks</li></a>
-							<a href="tag.html"><li>#soccer</li></a>
-							<a href="#"><li>#food</li></a>
-							<a href="#"><li>#time</li></a>
-						</ul>
+						<form action="search-results.html" method="GET">
+							<noscript>
+								<input type="submit" value="Search" class="searchBtn">
+							</noscript>
+							<div class="noscriptSearch">
+								<input type="text" name="search" placeholder="Search for people or tags ..." id="searchInput">
+							</div>
+						</form>
+						<ul class="search-results" id="results"></ul>
 					</div>
 				</div>
+
+				<script type="text/javascript" src="js/ajaxSearch.js"></script>
 
 				<div class="row">
 				
