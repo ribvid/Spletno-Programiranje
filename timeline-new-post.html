@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Timeline | Microblog</title>
+		<link rel="stylesheet" href="css/framework.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/lightbox.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+	</head>
+	<body>
+		<div class="grid">
+
+			<!-- Profile Info -->
+			<div class="row logged-in-toolbar">
+				<div class="small-profile-image">
+					<img src="img/profile-image.jpeg" alt="John Appleseed">
+				</div>
+				<!-- Za hamburger menu na manjših zaslonih -->
+				<label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+				<input type="checkbox" id="menu-toggle">
+				<!-- End -->
+				<ul id="logged-in-nav">
+					<li>John Appleseed</li>
+					<li><a href="timeline.html">Timeline</a></li>
+					<li><a href="logged-in-profile.html">View my profile</a></li>
+					<li><a href="favorited-posts.html">View favorited posts</a></li>
+					<li><a href="shared-posts.html">View shared posts</a></li>
+					<li><a href="edit-profile.html">Edit my profile info</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+			</div>
+
+			<!-- Vsebina -->
+			<div class="content logged-in">
+
+				<!-- Objava -->
+				<div class="row">
+					<div class="col-12 post post-6">
+						Publish a new post.
+						<form class="new-post" method="post" action="timeline-new-post.html">
+							<textarea maxlength="250" placeholder="Write your post here (max. 250 characters)." rows="4"></textarea>
+							<input type="submit" value="Publish">
+						</form>
+						<p id="postLocation"></p>
+					</div>
+					<div class="col-12 post post-6 right-side">
+						Share an image.
+						<form class="new-post" method="post" action="timeline-new-image.html">
+							<p class="add-profile-image">Upload your image: <input type="file" name="profile-image"></p>
+							<textarea maxlength="100" placeholder="Write your description here (max. 100 characters)." rows="2"></textarea>
+							<input type="submit" value="Publish">
+						</form>
+						<p id="imageLocation"></p>
+					</div>
+				</div>
+
+				<!-- Obvestilo -->
+				<div class="row">
+					<div class="col-12 post notification-12">
+						<span class="close-notification">&times;</span>
+						<!-- Povezava deluje samo v primeru, ko ima uporabnik izklopljen JavaScript -->
+						Liam Forster tagged you in a <a id="tagged-in-link" href="tagged-in-posts.html" onclick="revealPost('tagged-in-post')">post</a>.
+					</div>
+				</div>
+
+				<!-- Objava, v kateri je uporabnik oznacen -->
+				<div class="row">
+					<div class="col-12 post" id="tagged-in-post" style="display: none;">
+						<p class="text"><a href="profile.html">@JohnAppleseed</a>: Pellentesque id eros in erat sodales placerat at sit amet est. Integer pulvinar malesuada leo, vel volutpat augue luctus eu. Cras suscipit diam vel dictum suscipit.</p>
+						<ul class="meta">
+							<li>Liam Forster</li>
+							<li>Chicago</li>
+							<li>8 November, 2016 at 6 PM</li>
+							<li><a href="#"><span class="repost tooltip"><span class="tooltiptext">1</span></span></a></li>
+							<li><a href="#"><span class="favorite tooltip"><span class="tooltiptext">3</span></span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 1. objava - full width -->
+				<div class="row">
+					<div class="col-12 post">
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim leo quis nisi elementum imperdiet. Ut porta tortor ut mattis porta. Vivamus euismod eu lorem sed ornare. Nulla suscipit neque nec porttitor condimentum. <a href="soccer.html">#soccer</a></p>
+						<ul class="meta">
+							<li>David Chapman</li>
+							<li>Manchester</li>
+							<li>30th October, 2016 at 7 PM</li>
+							<li><a href="#"><span class="repost tooltip"><span class="tooltiptext">0</span></span></a></li>
+							<li><a href="#"><span class="favorite tooltip"><span class="tooltiptext">4</span></span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 2. objava - half width -->
+				<div class="row">
+					<div class="col-6 post post-6">
+						<p class="text">
+							Sed vitae dictum risus. Sed a diam nisi. Fusce venenatis, felis pharetra gravida ullamcorper, eros velit feugiat est, et porttitor massa eros sed neque. Nulla facilisi. <a href="#">#risus</a>
+						</p>
+						<ul class="meta">
+							<li>Tom Hanks</li>
+							<li>New York</li>
+							<li>30th October, 2016 at 12 PM</li>
+							<li><a href="#"><span class="isreposted tooltip"><span class="tooltiptext">112</span></span></a></li>
+							<li><a href="#"><span class="favorite tooltip"><span class="tooltiptext">556</span></span></a></li>
+						</ul>
+					</div>
+					<div class="col-6 image-post post-6 right-side dark">
+						<div class="row">	
+							<div class="image-description">	
+								<p class="text">Morbi suscipit ipsum quis risus maximus, non consequat urna gravida. <a href="#">#time</a> <a href="#">#flies</a></p>
+								<ul class="meta">
+									<li>Elisabeth O'Sullivan</li>
+									<li>Norfalk</li>
+									<li>31 December, 2016 at 12 AM</li>
+									<li><a href="#"><span class="repost tooltip"><span class="tooltiptext">4</span></span></a></li>
+							<li><a href="#"><span class="isfavorited tooltip"><span class="tooltiptext">9</span></span></a></li>
+								</ul>
+							</div>
+							<div class="image">
+								<img id="image-1" src="img/clock.jpg" alt="Morbi suscipit ipsum quis risus maximus, non consequat urna gravida. #time #flies" class="img-responsive" onclick="showImage('full-size-image-1', 'image-1', 'big-image-1', 'caption-image-1', 'close-image-1')">
+
+								<!-- Slika v polni velikosti -->
+								<div id="full-size-image-1" class="modal-image">
+									<span class="close-modal" id="close-image-1" onclick="document.getElementById('full-size-image').style.display='none'">&times;</span>
+									<img src="#" class="modal-image-content" id="big-image-1" alt="">
+									<div class="modal-image-caption" id="caption-image-1"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3. objava - full width -->
+				<div class="row">
+					<div class="col-12 post">
+						<p class="text">Ut convallis neque nisi, varius elementum risus interdum vel. Donec turpis ante, rhoncus eget faucibus eu, semper id quam. <a href="tag.html">#soccer</a></p>
+						<ul class="meta">
+							<li>Liam Forster</li>
+							<li>Chicago</li>
+							<li>30th October, 2016 at 4 AM</li>
+							<li><a href="#"><span class="repost tooltip"><span class="tooltiptext">1</span></span></a></li>
+							<li><a href="#"><span class="favorite tooltip"><span class="tooltiptext">8</span></span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<div class="row footer">
+					<div class="col-12">
+						<p>Vid Ribič • Spletno programiranje • Fakulteta za računalništvo in informatiko • 2016</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="js/taggedInPosts.js"></script>
+		<script src="js/lightbox.js"></script>
+		<script src="js/geolocation.js"></script>
+	</body>
+</html>
