@@ -1,0 +1,190 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f6f6f6;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #5575d5;
+}
+
+/* Placeholder color */
+*::-webkit-input-placeholder {
+    color: #a9a9a9;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #a9a9a9;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #a9a9a9;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #a9a9a9;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    border: none;
+    background-color: #f6f6f6;
+}
+
+input[type=submit] {
+    margin-bottom: 0;
+    background-color: #222;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type=file] {
+    padding: 0 0 0 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #f6f6f6;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+textarea:focus {
+    outline-style: none;
+}
+
+.add-profile-image {
+    color: #a9a9a9;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+.grid {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.post-3,
+.notification-3 {
+    width: 24%;
+}
+
+.post-4,
+.notification-4 {
+    width: 32.33%;
+}
+
+.post-6,
+.notification-6 {
+    width: 49%;
+}
+
+.post-8,
+.notification-8 {
+    width: 65.66%;
+}
+
+.post-12,
+.notification-12 {
+    width: 100%;
+}
+
+.right-side {
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 980px) {
+    /* Prelom za mobilne naprave */
+    [class*="col-"] {
+        width: 100%;
+    }
+    .row {
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+    }
+}
