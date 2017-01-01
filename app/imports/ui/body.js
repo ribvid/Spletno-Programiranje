@@ -18,6 +18,12 @@ if (Meteor.isClient) {
 				email: emailVar,
 				bio: bioVar,
 				profileImage: imageVar
+			}, function(error) {
+				if (error) {
+					document.getElementById("registerError").innerHTML = error.reason;
+				} else {
+					// code
+				}
 			});
 		}
 	});
@@ -28,7 +34,16 @@ if (Meteor.isClient) {
 			var usernameVar = event.target.loginUsername.value;
 			var passwordVar = event.target.loginPassword.value;
 
-			Meteor.loginWithPassword(usernameVar, passwordVar);
+			Meteor.loginWithPassword(usernameVar, passwordVar, function(error) {
+				if (error) {
+					event.target.reset();
+					event.target.loginPassword.focus();
+					event.target.loginUsername.focus();
+					document.getElementById("loginError").innerHTML = error.reason;
+				} else {
+					console.log("everything ok");
+				}
+			});
 		}
 	});
 
@@ -36,6 +51,7 @@ if (Meteor.isClient) {
 		'click .logout': function(event) {
 			event.preventDefault();
 			Meteor.logout();
+			Meteor.onLoginFailure();
 		}
 	});
 }
