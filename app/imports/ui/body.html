@@ -32,7 +32,11 @@
 				<!-- Login -->
 				<div class="col-6 post post-6">
 					<h2>Login</h2>
-					{{> login}}
+					{{#if currentUser}}
+						{{> dashboard}}
+					{{else}}
+						{{> login}}
+					{{/if}}
 				</div>
 
 				<!-- Sign up -->
@@ -58,7 +62,7 @@
 
 <template name="login">
     <form>
-        <input type="email" name="loginEmail" placeholder="Username">
+        <input type="text" name="loginUsername" placeholder="Username">
         <input type="password" name="loginPassword" placeholder="Password">
         <input type="submit" value="Login">
     </form>
@@ -66,11 +70,16 @@
 
 <template name="register">
     <form>
-    	<input type="email" name="registerEmail" placeholder="Username">
+    	<input type="text" name="registerUsername" placeholder="Username">
 		<input type="password" name="registerPassword" placeholder="Pasword">
-		<!-- <input type="email" name="email" placeholder="Email">
-		<input type="text" name="short-bio" placeholder="Short bio (max. 100 characters)" maxlength="100">
-		<p class="add-profile-image">Add profile image: <input type="file" name="profile-image"></p> -->
+		<input type="email" name="registerEmail" placeholder="Email">
+		<input type="text" name="registerBio" placeholder="Short bio (max. 100 characters)" maxlength="100">
+		<p class="add-profile-image">Add profile image: <input type="file" name="registerImage"></p>
 		<input type="submit" value="Register">
     </form>
+</template>
+
+<template name="dashboard">
+	<p>You're logged in.</p>
+	<p><a href="#" class="logout">Log out</a></p>
 </template>
