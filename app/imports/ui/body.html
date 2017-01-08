@@ -1,52 +1,8 @@
-<body class="join">
+<template name="mainLayout">
+
 	<div class="grid">
 
-		<!-- Header -->
-		<div class="row header">
-			<div class="col-12">
-				<h1 class="text-center">Welcome to Microblog!</h1>
-			</div>
-		</div>
-
-		<div class="content">
-
-			<!-- Search -->
-			<div class="row">
-				<div class="col-12 search">
-					<form action="search-results.html" method="GET">
-						<noscript>
-							<input type="submit" value="Search" class="searchBtn">
-						</noscript>
-						<div class="noscriptSearch">
-							<input type="text" name="search" placeholder="Search for people or tags ..." id="searchInput">
-						</div>
-					</form>
-					<ul class="search-results" id="results"></ul>
-				</div>
-			</div>
-
-			<script type="text/javascript" src="js/ajaxSearch.js"></script>
-
-			<div class="row">
-			
-				<!-- Login -->
-				<div class="col-6 post post-6">
-					<h2>Login</h2>
-					{{#if currentUser}}
-						{{> dashboard}}
-					{{else}}
-						{{> login}}
-					{{/if}}
-				</div>
-
-				<!-- Sign up -->
-				<div class="col-6 post post-6 right-side">
-					<h2>Sign Up</h2>
-					{{> register}}
-				</div>
-
-			</div>
-		</div>
+		{{>Template.dynamic template=content}}
 
 		<!-- Footer -->
 		<div class="row footer">
@@ -57,31 +13,4 @@
 
 	</div>
 
-</body>
-
-
-<template name="login">
-    <form>
-        <input type="text" name="loginUsername" placeholder="Username">
-        <input type="password" name="loginPassword" placeholder="Password">
-        <input type="submit" value="Login">
-    </form>
-    <p id="loginError"></p>
-</template>
-
-<template name="register">
-    <form>
-    	<input type="text" name="registerUsername" placeholder="Username">
-		<input type="password" name="registerPassword" placeholder="Pasword">
-		<input type="email" name="registerEmail" placeholder="Email">
-		<input type="text" name="registerBio" placeholder="Short bio (max. 100 characters)" maxlength="100">
-		<p class="add-profile-image">Add profile image: <input type="file" name="registerImage"></p>
-		<input type="submit" value="Register">
-		<p id="registerError"></p>
-    </form>
-</template>
-
-<template name="dashboard">
-	<p>You're logged in.</p>
-	<p><a href="#" class="logout">Log out</a></p>
 </template>
